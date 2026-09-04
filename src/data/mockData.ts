@@ -1,0 +1,133 @@
+import { Equipment, BookingRequest, Dictionary } from '../types';
+
+export const mockEquipment: Equipment[] = [
+  {
+    id: 'e1',
+    title: 'Mahindra 575 DI (45 HP) + 6ft Rotavator',
+    titleMr: 'महिंद्रा ४५ एचपी ट्रॅक्टर व रोटाव्हेटर',
+    titleHi: 'महिंद्रा ४५ एचपी ट्रैक्टर और रोटावेटर',
+    type: 'Tractor',
+    category: 'tractor',
+    hp: '45 HP',
+    rateHr: 650,
+    rateAcre: 1500,
+    village: 'Pimpalgaon',
+    distance: 3.2,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/85/Ford_8N.jpg',
+    ownerId: 'o1',
+    ownerName: 'Balasaheb Jadhav',
+    ownerRating: 4.9,
+    verified: true,
+    features: ['Heavy Rotavator', 'Certified Driver Included'],
+    status: 'available',
+    lat: 20.0059,
+    lng: 73.7898
+  },
+  {
+    id: 'e2',
+    title: 'John Deere 5050 D (50 HP) + Seed Drill',
+    titleMr: 'जॉन डीअर ५० एचपी व अचूक पेरणी यंत्र',
+    titleHi: 'जॉन डीअर ५० एचपी व सटीक बुवाई मशीन',
+    type: 'Tractor',
+    category: 'planter',
+    hp: '50 HP',
+    rateHr: 850,
+    rateAcre: 1800,
+    village: 'Ozar Taluka',
+    distance: 5.8,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/5/55/HondaTiller.jpg',
+    ownerId: 'o2',
+    ownerName: 'Dnyaneshwar Gaikwad',
+    ownerRating: 4.8,
+    verified: true,
+    features: ['GPS Guided', 'Low Fuel Consumption'],
+    status: 'in_field',
+    lat: 20.0259,
+    lng: 73.7998
+  },
+  {
+    id: 'e3',
+    title: 'Kubota DC-68G Paddy & Grain Harvester',
+    titleMr: 'कुबोटा कम्बाईन हार्वेस्टर (कापणी व मळणी)',
+    titleHi: 'कुबोटा कंबाइन हार्वेस्टर (कटाई और थ्रेसिंग)',
+    type: 'Harvester',
+    category: 'harvester',
+    hp: '101 HP',
+    rateHr: 1800,
+    rateAcre: 3500,
+    village: 'Niphad',
+    distance: 8.4,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/1e/Corn_combine_harvest_with_grain_cart-4.jpg',
+    ownerId: 'o3',
+    ownerName: 'Niphad Farmers Agrico-op',
+    ownerRating: 4.9,
+    verified: true,
+    features: ['Zero Grain Loss Guarantee', '2 Expert Operators Included'],
+    status: 'available',
+    lat: 20.0359,
+    lng: 73.7798
+  },
+  {
+    id: 'e4',
+    title: 'Garuda Kisan Drone Sprayer (16L Tank)',
+    titleMr: 'गरुड किसान ड्रोन औषध फवारणी यंत्र',
+    titleHi: 'गरुड़ किसान ड्रोन दवा छिड़काव मशीन',
+    type: 'Drone',
+    category: 'drone',
+    hp: 'N/A',
+    rateHr: 3000,
+    rateAcre: 450,
+    village: 'Nashik Station',
+    distance: 2.1,
+    image: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/Drone_crop_fertilizer.jpg',
+    ownerId: 'o4',
+    ownerName: 'Govt. CHC Nashik',
+    ownerRating: 4.9,
+    verified: true,
+    features: ['8 mins per acre', 'Saves 90% Water & Chemical'],
+    status: 'available',
+    lat: 20.0159,
+    lng: 73.7698
+  }
+];
+
+export const mockRequests: BookingRequest[] = [
+  {
+    id: 'req1',
+    equipmentId: 'e1',
+    farmerName: 'Sachin Gaikwad',
+    farmerVillage: 'Shinde Village',
+    operation: '6 Acres Wheat Sowing',
+    acres: 6,
+    estimatedRevenue: 4800,
+    status: 'pending',
+    driverIncluded: true,
+    dieselIncluded: true,
+    date: 'Tomorrow, 7:00 AM'
+  },
+  {
+    id: 'req2',
+    equipmentId: 'e2',
+    farmerName: 'Ramesh Deshmukh',
+    farmerVillage: 'Pimpalgaon Baswant',
+    operation: 'Rotavator Tilling (10 Acres)',
+    acres: 10,
+    estimatedRevenue: 5200,
+    status: 'pending',
+    driverIncluded: true,
+    dieselIncluded: false,
+    date: 'Thursday, 08:00 AM'
+  }
+];
+
+export const dictionary: Dictionary = {
+  'Home & Explore': { en: 'Home & Explore', mr: 'मुख्य पृष्ठ', hi: 'होम और एक्सप्लोर' },
+  'Rent Equipment': { en: 'Rent Equipment', mr: 'भाड्याने घ्या', hi: 'किराये पर लें' },
+  'Owner Dashboard': { en: 'Owner Dashboard', mr: 'यंत्र मालक', hi: 'उपकरण मालिक' },
+  'My Bookings': { en: 'My Bookings', mr: 'माझे आरक्षण', hi: 'मेरी बुकिंग' },
+  'Help & Voice Support': { en: 'Help & Voice Support', mr: 'मदत केंद्र', hi: 'सहायता केंद्र' },
+  'Farmer': { en: 'Farmer', mr: 'शेतकरी', hi: 'किसान' },
+  'Owner': { en: 'Owner', mr: 'यंत्र मालक', hi: 'मालिक' },
+  'Find Machinery': { en: 'Find Machinery', mr: 'यंत्र शोधा', hi: 'मशीनरी खोजें' },
+  'Book Now': { en: 'Book Now', mr: 'आताच बुक करा', hi: 'अभी बुक करें' }
+};

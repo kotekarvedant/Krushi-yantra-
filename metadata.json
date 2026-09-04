@@ -1,0 +1,11 @@
+{
+  "name": "KrushiYantr",
+  "description": "A village-level smart farm equipment sharing and rental marketplace.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
